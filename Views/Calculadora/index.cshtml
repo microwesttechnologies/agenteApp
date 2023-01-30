@@ -1,0 +1,42 @@
+@model agenteApp.Models.Calculadora;
+
+@{
+    ViewData["Title"] = "Calculadora";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Funcion 1</h1>
+
+<form  asp-controller="Calculadora" asp-action="Calcular"> 
+
+    
+    <br>
+    <label>Numero 1</label>
+    <input asp-for="Num1">
+    <br>
+    <label>Numero 2</label>
+    <input asp-for="Num2">
+        <br>
+    <label>Numero 3</label>
+    <input asp-for="Num3">
+        <br>
+    <label>Numero 4</label>
+    <input asp-for="Num4">
+        <br>
+    <label>Elige un agente</label>
+    <select asp-for="Accion">
+      <option value="A">Agente A</option>
+      <option value="B">Agente B</option>
+      <option value="C">Agente C</option>
+    </select>
+    <br>
+    <input type="submit" value="Calcular">
+
+</form>
+
+
+<td>@Html.DisplayNameFor(model => model.Respuesta)</td>
+<td>@Html.DisplayTextFor(model => model.Respuesta)</td>
+
+
+</div>
